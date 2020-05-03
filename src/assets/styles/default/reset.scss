@@ -1,0 +1,111 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 0;
+  line-height: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 0;
+  line-height: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-main {
+  flex: 1;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.left-top {
+  left: 0;
+  top: 0;
+}
+
+.right-bottom {
+  right: 0;
+  bottom: 0;
+}
+
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+/*垂直翻转*/
+.flipy {
+  -moz-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+/*文字超出省略*/
+.ellipsis {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  word-break: keep-all;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.word-wrap {
+  word-wrap: break-word;
+  word-break: normal;
+}

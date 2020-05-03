@@ -1,0 +1,163 @@
+@import "./reset.scss";
+
+.sn-web {
+  $min-width: 1200px;
+  $font-size: 14px;
+  $font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei",
+    PingFangSC-Regular, Helvetica, Arial, sans-serif;
+  $font-weight: 600;
+  $line-height: 1.5;
+
+  @mixin large-text {
+    font-family: $font-family;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  @mixin small-text {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  $color: #333333;
+  $color-hover: #fff;
+  $color-active: #fff;
+  $color-primary: #409eff;
+  $color-required: #f01616;
+
+  $border-color: #999999;
+  $border-color-hover: #409eff;
+  $border-color-active: #e6a23c;
+  $border-color-primary: #409eff;
+
+  $box-color: #409eff;
+  $box-color-hover: #e6a23c;
+  $box-color-active: #e6a23c;
+  $box-color-selected: #f01616;
+  $box-color-installed: #409eff;
+  $box-color-disabled: #999999;
+  $box-color-remove-disabled: #2972bb;
+  $box-color-linking: #e6a23c;
+  $box-color-linked: #f01616;
+
+  $line-color-primary: #67c23a;
+  $line-color-primary-hover: #14a007;
+  $line-color-linear-primary: linear-gradient(
+    to right,
+    #c0f5c9,
+    #67c23a,
+    #c0f5c9
+  );
+  $line-color-linear-primary-hover: linear-gradient(
+    to right,
+    #c0f5c9,
+    #14a007,
+    #c0f5c9
+  );
+
+  $line-color-custom: #999999;
+  $line-color-custom-hover: #000000;
+  $line-color-linear-custom: linear-gradient(
+    to right,
+    #999999,
+    #555555,
+    #999999
+  );
+  $line-color-linear-custom-hover: linear-gradient(
+    to right,
+    #777777,
+    #333333,
+    #777777
+  );
+
+  $bg-color: #fff;
+  $bg-color-hover: #76b8fa;
+  $bg-color-active: #e6a23c;
+  $bg-color-primary: #d3e6f8;
+
+  $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  $box-shadow-hover: 0 2px 4px rgba(25, 137, 250, 0.12),
+    0 0 6px rgba(25, 137, 250, 0.04);
+  $box-shadow-active: 0 2px 4px rgba(255, 138, 0, 0.12),
+    0 0 6px rgba(255, 138, 0, 0.04);
+  $box-shadow-primary: 0 2px 4px rgba(25, 137, 250, 0.12),
+    0 0 6px rgba(25, 137, 250, 0.04);
+  $border-radus: 6px;
+
+  font-size: $font-size;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  margin: 0 0;
+  padding: 0 0;
+  user-select: none; //禁止选择文本
+  &.layout-md {
+    .page-header::after {
+      content: "| width：md";
+    }
+  }
+  &.layout-lg {
+    .page-header::after {
+      content: "| width：lg";
+    }
+  }
+  // @import "./element-variables.scss";
+  @import "./global.scss";
+  @import "./steps.scss";
+  @import "./home.scss";
+  @import "./install.scss";
+  @import "./cmd.scss";
+
+  // 布局-风格-custom
+  &.layout-custom {
+    $color-primary: #ee4816;
+    $border-color: #999999;
+
+    $box-color: #ee4816;
+    $box-color-hover: #e6a23c;
+    $box-color-active: #e6a23c;
+    $box-color-selected: #409eff;
+    $box-color-installed: #ee4816;
+    $box-color-disabled: #999999;
+    $box-color-remove-disabled: #c44823;
+    $box-color-linking: #67c23a;
+    $box-color-linked: #409eff;
+
+    $line-color-primary: #67c23a;
+    $line-color-primary-hover: #14a007;
+    $line-color-linear-primary: linear-gradient(
+      to right,
+      #c0f5c9,
+      #67c23a,
+      #c0f5c9
+    );
+    $line-color-linear-primary-hover: linear-gradient(
+      to right,
+      #c0f5c9,
+      #14a007,
+      #c0f5c9
+    );
+
+    $line-color-custom: #999999;
+    $line-color-custom-hover: #000000;
+    $line-color-linear-custom: linear-gradient(
+      to right,
+      #999999,
+      #555555,
+      #999999
+    );
+    $line-color-linear-custom-hover: linear-gradient(
+      to right,
+      #777777,
+      #333333,
+      #777777
+    );
+
+    @import "./global.scss";
+    @import "./steps.scss";
+    @import "./home.scss";
+    @import "./install.scss";
+    @import "./cmd.scss";
+  }
+}

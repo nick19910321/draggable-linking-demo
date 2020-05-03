@@ -1,0 +1,44 @@
+&.page-panel {
+  height: 100%;
+  .page-header {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 10px;
+    line-height: 50px;
+    box-shadow: $box-shadow;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $color-primary;
+    @include large-text;
+  }
+  .page-main {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    box-sizing: border-box;
+  }
+}
+.fullsceen {
+  height: 100%;
+}
+
+.tap-tool {
+  margin: 10px 0;
+  padding: 10px 10px;
+  box-shadow: $box-shadow;
+  display: block;
+  .tap-radio {
+    padding: 10px 10px;
+    display: block;
+  }
+}
+// 滚动条
+.page-scrollbar {
+  height: 100% !important;
+  overflow: hidden !important;
+  .el-scrollbar__wrap {
+    overflow: auto !important;
+  }
+}

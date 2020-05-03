@@ -1,0 +1,58 @@
+.cmd {
+  height: 100%;
+  box-sizing: border-box;
+  .left-panel {
+    height: 100%;
+  }
+  .main-panel {
+    height: 100%;
+  }
+  .left-panel-wrap {
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    box-shadow: $box-shadow;
+    box-sizing: border-box;
+  }
+  .main-panel-wrap {
+    margin: 0 0 0 10px;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .tree-wrap {
+    .el-tree--highlight-current {
+      .el-tree-node__children {
+        .el-tree-node.is-current {
+          .el-tree-node__content {
+            background-color: $bg-color-primary;
+          }
+        }
+      }
+    }
+  }
+  .tabs-wrap {
+  }
+  .show-wrap {
+  }
+  .execute-wrap {
+  }
+  .log-wrap {
+  }
+  .form-wrap {
+    margin: 10px 0 0 0;
+    .form-input {
+      width: 600px;
+    }
+    .form-required {
+      .el-form-item__label {
+        color: $color-required;
+      }
+    }
+  }
+  .ime-mode-disabled {
+    ime-mode: disabled; //IE下限制输入法切换的css
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "vuecli-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "element-ui-build": "./node_modules/.bin/et build element theme -o ./src/assets/styles/default",
+    "local": "vue-cli-service serve --mode local",
+    "dev": "vue-cli-service serve --mode dev",
+    "dev_build": "vue-cli-service build --mode dev",
+    "build": "vue-cli-service build --mode prod",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.4.4",
+    "element-ui": "^2.13.0",
+    "konva": "^4.1.2",
+    "md5": "^2.2.1",
+    "mockjs": "^1.1.0",
+    "vue": "^2.6.10",
+    "vue-i18n": "^8.15.3",
+    "vue-konva": "^2.1.1",
+    "vue-router": "^3.1.3",
+    "vuedraggable": "^2.23.2",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-router": "^4.1.0",
+    "@vue/cli-plugin-vuex": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-component": "^1.1.1",
+    "element-theme": "^2.0.1",
+    "element-theme-chalk": "^2.13.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

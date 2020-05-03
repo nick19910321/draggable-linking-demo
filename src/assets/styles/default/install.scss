@@ -1,0 +1,219 @@
+.install {
+  height: 100%;
+  box-sizing: border-box;
+
+  .left-panel {
+    height: 100%;
+  }
+  .main-panel {
+    height: 100%;
+  }
+
+  .left-panel-wrap {
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    box-shadow: $box-shadow;
+    box-sizing: border-box;
+  }
+
+  .main-panel-wrap {
+    margin: 0 0 0 10px;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  .drag-wrap {
+    position: relative;
+  }
+  .drop-wrap {
+    position: relative;
+  }
+
+  .drag-panel {
+    margin: 10px;
+    border: 1px solid $border-color;
+    .panel-title {
+      padding: 0 10px;
+    }
+    .panel-content {
+    }
+  }
+  .drag-box {
+    margin: 10px;
+    padding: 0 10px;
+    border: 1px solid $border-color;
+    color: $box-color;
+    .box-title {
+      font-size: 12px;
+    }
+    .box-icon {
+      font-size: 50px;
+    }
+    .box-content {
+      padding: 10px;
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+        text-shadow: 0px 1px 1px $box-color;
+      }
+      &.selected {
+        color: $box-color-selected;
+        &:hover {
+          color: $box-color-selected;
+          text-shadow: 0px 1px 1px $box-color-selected;
+        }
+      }
+
+      &.disabled {
+        &:hover {
+          color: $box-color;
+          cursor: default;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+
+  .drop-panel {
+    margin: 10px;
+    padding: 10px;
+    .panel-title {
+      padding: 0 10px;
+    }
+    .panel-content {
+    }
+  }
+
+  .drop-box {
+    color: $box-color;
+    .drop-box-wrap {
+      height: 180px;
+      margin: 10px;
+      border: 1px solid $border-color;
+      box-sizing: border-box;
+      position: relative;
+    }
+    // .box-content定义
+    @mixin box-content($height, $line-height) {
+      height: $height;
+      text-align: center;
+      color: $box-color-disabled;
+      cursor: not-allowed;
+      .box-icon {
+        line-height: $line-height;
+        font-size: 50px;
+      }
+      &.installed {
+        color: $box-color-installed;
+        &:hover {
+          cursor: pointer;
+          color: $box-color-installed;
+          text-shadow: 0px 1px 1px $box-color-installed;
+        }
+      }
+      &.disabled {
+        color: $box-color-disabled;
+        &:hover {
+          cursor: not-allowed;
+          color: $box-color-disabled;
+          text-shadow: none;
+        }
+      }
+      &.remove-disabled {
+        color: $box-color-remove-disabled;
+        &:hover {
+          cursor: not-allowed;
+          color: $box-color-remove-disabled;
+          text-shadow: none;
+        }
+      }
+      &.linking {
+        color: $box-color-linking;
+        &:hover {
+          color: $box-color-linking;
+          text-shadow: 0px 1px 1px $box-color-linking;
+        }
+      }
+      &.linked {
+        color: $box-color-linked;
+        &:hover {
+          cursor: default;
+          color: $box-color-linked;
+          text-shadow: none;
+        }
+      }
+    }
+    // 父元素引用
+    .box-content {
+      @include box-content(180px, 180px);
+    }
+
+    .box-children-content {
+      width: 90px;
+      height: 180px;
+      text-align: center;
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: 0;
+      // 子元素嵌套
+      .box-child {
+        width: 90px;
+        @include box-content(90px, 90px);
+      }
+    }
+  }
+
+  .line-list {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  // .line-panel主题定义
+  @mixin line-panel($color, $color-hover, $image-color, $image-color-hover) {
+    position: absolute;
+    z-index: 98;
+    cursor: pointer;
+    .line-path {
+      width: 0;
+      position: absolute;
+      background-color: $color;
+      background-image: $image-color;
+      border: none;
+    }
+    &:hover {
+      z-index: 99;
+      .line-path {
+        background-color: $color-hover;
+        background-image: $image-color-hover;
+      }
+    }
+    :first-child {
+    }
+    :last-child {
+    }
+  }
+  // .line-panel主题分类
+  .line-panel {
+    &.primary {
+      @include line-panel(
+        $line-color-primary,
+        $line-color-primary-hover,
+        $line-color-linear-primary,
+        $line-color-linear-primary-hover
+      );
+    }
+    &.custom {
+      @include line-panel(
+        $line-color-custom,
+        $line-color-custom-hover,
+        $line-color-linear-custom,
+        $line-color-linear-custom-hover
+      );
+    }
+  }
+}
