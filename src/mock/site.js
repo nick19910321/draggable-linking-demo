@@ -1,5 +1,5 @@
 /**
- * Created by sn on 2019/11/7.
+ * Created by nick on 2019/11/7.
  */
 const site = {
   getSiteInfo: (req) => {

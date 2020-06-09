@@ -1,5 +1,5 @@
 /**
- * Created by sn on 2017/3/12.
+ * Created by nick on 2017/3/12.
  */
 import moment from "moment"; //日期格式化类库
 

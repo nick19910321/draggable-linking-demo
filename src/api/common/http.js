@@ -1,6 +1,6 @@
 /**
  * http配置
- * Created by sn on 2019/3/18.
+ * Created by nick on 2019/3/18.
  */
 
 // 引入axios以及element ui中的loading和message组件
